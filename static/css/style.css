@@ -1,0 +1,73 @@
+/* style.css: SOLO l'aspetto. Cambia i colori qui sotto! */
+:root {
+  --sfondo: #eeeeee;
+  --scheda: #f8f8f8;
+  --accento: #5145ed;
+  --testo: #111111;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: Arial, sans-serif;
+  background: var(--sfondo);
+  color: var(--testo);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+h1 {
+  margin: 0 auto 0 0;
+  font-size: 24px;
+}
+
+button {
+  background: var(--accento);
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button.secondary { background: #777777; }
+button:focus-visible, input:focus-visible { outline: 3px solid var(--testo); outline-offset: 2px; }
+
+#channels {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.channel {
+  background: var(--scheda);
+  border-radius: 9px;
+  padding: 12px;
+  min-width: 0;
+}
+
+.channel-name {
+  font-weight: 600;
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.control label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.control input { width: 100%; accent-color: var(--accento); }
+
+@media (max-width: 800px) { #channels { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 420px) { #channels { grid-template-columns: 1fr; } }

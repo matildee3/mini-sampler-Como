@@ -1,0 +1,2 @@
+Metti qui fino a 8 file audio (wav, mp3, flac, ogg, aif, aiff).
+Poi apri config.py e attiva la riga:   SOUND_SOURCE = "folder"
